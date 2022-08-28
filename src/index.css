@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 1.25em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+main {
+    display: flex;
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+td, th {
+    font-size: .8em;
+    padding: .25em;
+    text-align: right;
+}
+
+tr:nth-child(even) { background:lightgray }
+tr:nth-child(odd) { background: white}
+
+.app {
+    background-color: whitesmoke;
+    margin: 0 auto;
+    padding: 1em;
+    width: 800px;
+}
+
+.loading {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+} 
+
+.operations {
+    width: 65%;
+}
+
+.rates {
+    width: 35%;
+}
