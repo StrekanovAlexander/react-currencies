@@ -1,12 +1,13 @@
-import Rates from "./Rates"
+import ControlPanel from './ControlPanel'
 
 function Main(props) {
     return(
         <main>
-            <div className="operations">Operations</div>
-            <Rates 
-                rates={props.states.rates} 
-                isRatesLoading={props.states.isRatesLoading} />
+            <ControlPanel 
+                state={props.state} 
+                selectRate={props.selectRate}
+                displayModal={props.displayModal} 
+            />
         </main>
     )
 }

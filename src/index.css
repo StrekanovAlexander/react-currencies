@@ -3,6 +3,16 @@
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+    text-transform: uppercase;
+}
+
+button {
+    background-color: black;
+    border: 0;
+    border-radius: .25em;
+    color: white;
+    cursor: pointer;
+    padding: .25em 1em;
 }
 
 header {
@@ -16,10 +26,6 @@ h1 {
 
 h2 {
     font-size: 1em;
-}
-
-main {
-    display: flex;
 }
 
 table {
@@ -36,6 +42,17 @@ td, th {
 tr:nth-child(even) { background:lightgray }
 tr:nth-child(odd) { background: white}
 
+.action {
+    background-color: whitesmoke;
+    padding: 1em;
+    width: 350px;
+}
+
+.action__btns {
+    display: flex;
+    justify-content: space-between;
+}
+
 .app {
     background-color: whitesmoke;
     margin: 0 auto;
@@ -43,16 +60,27 @@ tr:nth-child(odd) { background: white}
     width: 800px;
 }
 
-.loading {
+.control-panel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-loading {
+    width: 2em;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+} 
+
+.modal__container {
     align-items: center;
     display: flex;
     justify-content: center;
-} 
-
-.operations {
-    width: 65%;
-}
-
-.rates {
-    width: 35%;
+    height: 100%;
 }

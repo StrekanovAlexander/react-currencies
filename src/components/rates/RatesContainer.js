@@ -1,8 +1,8 @@
-import Loading from './Loading'
+import Loading from '../Loading'
 import RateItem from './RateItem'
 import RatesTable from './RatesTable'
 
-function Rates(props) {
+function RatesContainer(props) {
     const ratesList = props.rates.map(rate => 
        <RateItem rate={rate} key={rate.ccy} />              
     )
@@ -15,4 +15,4 @@ function Rates(props) {
     )
 }
 
-export default Rates
+export default RatesContainer
