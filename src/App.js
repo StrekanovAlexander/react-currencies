@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
+import ActionsTable from './components/ActionsTable'
 import Header from './components/Header'
-import Modal from './components/ui/Modal'
 import Main from './components/Main'
+import Modal from './components/ui/Modal'
 
 class App extends Component {
   state = {
     action: '',
+    actions: [
+      { id: 1, action: 'buy', ccy: 'USD', base_ccy: 'UAH', amount: 100, rate: 25, result: 2500, datetime: '234' },
+      { id: 2, action: 'sale', ccy: 'EUR', base_ccy: 'UAH', amount: 200, rate: 35, result: 3500, datetime: '235' },
+    ],
     isLoading: false,
     isModal: false,
     rates: [],
@@ -46,7 +51,6 @@ class App extends Component {
   }
 
   render() {
-    const { action, isLoading, isModal } = this.state
     return (
       <div className="app">
         <Header />
@@ -54,7 +58,8 @@ class App extends Component {
           selectRate={this.selectRate} 
           displayModal={this.displayModal}
         />
-        {isModal && <Modal action={action} isLoading={isLoading} displayModal={this.displayModal} />}
+        <ActionsTable actions={this.state.actions} />
+        {this.state.isModal && <Modal state={this.state} displayModal={this.displayModal} />}
       </div>
     )
   }  

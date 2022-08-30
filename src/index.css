@@ -30,13 +30,12 @@ h2 {
 
 table {
     border-spacing: 0;
+    margin-top: 1em;
     width: 100%;
 }
 
 td, th {
-    font-size: .8em;
     padding: .25em;
-    text-align: right;
 }
 
 tr:nth-child(even) { background:lightgray }
@@ -48,9 +47,15 @@ tr:nth-child(odd) { background: white}
     width: 350px;
 }
 
-.action__btns {
+.action div {
+    align-items: center;
     display: flex;
     justify-content: space-between;
+    padding: 1em 0 .5em;
+}
+
+.action input[type=number] {
+    text-align: right;
 }
 
 .app {
@@ -61,6 +66,7 @@ tr:nth-child(odd) { background: white}
 }
 
 .control-panel {
+    align-items: center;
     display: flex;
     justify-content: space-between;
 }

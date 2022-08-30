@@ -2,12 +2,16 @@ import ActionForm from '../ActionForm'
 
 function Modal(props) {
     const modalContent = () => {
-        if (props.isLoading) {
+        if (props.state.isLoading) {
             return (
                 <img className="img-loading" src="/images/loading.gif" alt="loading" />
             )    
-        } else if (props.action) {
-            return <ActionForm displayModal={props.displayModal} />
+        } else if (props.state.action) {
+            return <ActionForm 
+                    displayModal={props.displayModal} 
+                    action={props.state.action}
+                    selectedRate={props.state.selectedRate}
+                />
         }
     }
     return (
